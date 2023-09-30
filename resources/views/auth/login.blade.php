@@ -12,6 +12,23 @@
             </div>
         @endif
 
+        @env('local')
+            <div class="space-y-2 mb-4">
+                <x-login-link
+                    email="admin@laracasts.com"
+                    :user-attributes="['role' => 'admin']"
+                    label="Login as admin"
+                    :redirect-url="route('dashboard')"
+                />
+                <x-login-link
+                    email="employee@lparacasts.com"
+                    :user-attributes="['role' => 'employee']"
+                    label="Login as employee"
+                    :redirect-url="route('dashboard')"
+                />
+            </div>
+        @endenv
+
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
