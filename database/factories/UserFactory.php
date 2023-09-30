@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Location;
 use App\Models\Team;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -9,7 +10,7 @@ use Illuminate\Support\Str;
 use Laravel\Jetstream\Features;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
+ * @extends Factory<User>
  */
 class UserFactory extends Factory
 {
@@ -21,6 +22,7 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
+            'location_id' => collect(Location::all()->modelKeys())->random(),
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),

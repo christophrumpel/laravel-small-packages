@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CreateUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/create-user', CreateUserController::class)->name('create-user');
 
 Route::middleware([
     'auth:sanctum',
