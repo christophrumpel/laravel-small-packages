@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef27e20b49bdae60f9ddcb4d2a5a68c2",
+    "content-hash": "b5145131f13090c149f2de90c5ee647b",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -166,6 +166,70 @@
                 }
             ],
             "time": "2023-01-11T16:19:01+00:00"
+        },
+        {
+            "name": "christophrumpel/missing-livewire-assertions",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/christophrumpel/missing-livewire-assertions.git",
+                "reference": "547d86e014766fccf79f8241f18f3515f6c9da5a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/christophrumpel/missing-livewire-assertions/zipball/547d86e014766fccf79f8241f18f3515f6c9da5a",
+                "reference": "547d86e014766fccf79f8241f18f3515f6c9da5a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^10.0|^9.0",
+                "php": "^8.1",
+                "spatie/laravel-package-tools": "^1.4.3"
+            },
+            "require-dev": {
+                "brianium/paratest": "^6.2",
+                "livewire/livewire": "^3.0",
+                "orchestra/testbench": "^8.0|^7.4",
+                "phpunit/phpunit": "^9.3",
+                "spatie/laravel-ray": "^1.9"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Christophrumpel\\MissingLivewireAssertions\\MissingLivewireAssertionsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Christophrumpel\\MissingLivewireAssertions\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christoph Rumpel",
+                    "email": "christoph@christoph-rumpel.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This package adds missing livewire test assertions.",
+            "homepage": "https://github.com/christophrumpel/missing-livewire-assertions",
+            "keywords": [
+                "assertions",
+                "christophrumpel",
+                "laravel",
+                "livewire"
+            ],
+            "support": {
+                "issues": "https://github.com/christophrumpel/missing-livewire-assertions/issues",
+                "source": "https://github.com/christophrumpel/missing-livewire-assertions/tree/v2.1.1"
+            },
+            "time": "2023-09-29T12:34:11+00:00"
         },
         {
             "name": "dasprid/enum",
