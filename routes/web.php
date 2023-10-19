@@ -1,5 +1,6 @@
 <?php
 
+use Abraham\TwitterOAuth\TwitterOAuth;
 use App\Http\Controllers\CreateUserController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,6 +17,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/tweet', function () {
+    $connection = new TwitterOAuth(
+        config('services.twitter.consumer_key'),
+        config('services.twitter.consumer_secret'),
+        config('services.twitter.access_token'),
+        config('services.twitter.access_token_secret')
+
+    );
+    $connection->setApiVersion('2');
+    $connection->post("tweets", ["text" => "hello world"]);
 });
 
 Route::post('/create-user', CreateUserController::class)->name('create-user');
