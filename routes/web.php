@@ -1,6 +1,7 @@
 <?php
 
 use Abraham\TwitterOAuth\TwitterOAuth;
+use App\Http\Controllers\CreatePostController;
 use App\Http\Controllers\CreateUserController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,10 +29,14 @@ Route::get('/tweet', function () {
 
     );
     $connection->setApiVersion('2');
-    $connection->post("tweets", ["text" => "hello world"]);
+    $connection->post('tweets', ['text' => 'hello world']);
 });
 
-Route::post('/create-user', CreateUserController::class)->name('create-user');
+Route::post('/create-user', CreateUserController::class)
+    ->name('create-user');
+
+Route::post('/posts', CreatePostController::class)
+    ->name('create-post');
 
 Route::middleware([
     'auth:sanctum',
