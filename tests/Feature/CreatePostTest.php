@@ -9,10 +9,10 @@ uses(RefreshDatabase::class);
 it('stores a new post', function () {
     // Act
     $this->post(route('create-post'), [
-       'title' => 'My New Post',
-       'content' => 'My post content.',
-       'category' => PostCategory::PUBLISHED->value,
-    ])->assertSuccessful();
+        'title' => 'My New Post',
+        'content' => 'My post content.',
+        'category' => PostCategory::PUBLISHED->value,
+    ])->assertRedirect();
 
     // Assert
     $this->assertDatabaseCount(Post::class, 1);

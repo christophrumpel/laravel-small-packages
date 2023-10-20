@@ -38,7 +38,8 @@ Route::get('/tweet', function () {
 Route::post('/create-user', CreateUserController::class)
     ->name('create-user');
 
-Route::get('/posts/create', CreatePostFormController::class);
+Route::get('/posts/create', CreatePostFormController::class)
+    ->name('create-post-form');;
 
 
 Route::post('/posts', CreatePostController::class)
