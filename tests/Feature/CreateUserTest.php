@@ -32,3 +32,21 @@ it('stores user phone number', function () {
         'phone' => '+4366412345678',
     ]);
 });
+
+it('only accepts Austrian numbers', function () {
+    $this->post('/create-user', [
+        'email' => 'test@laracasts.com',
+        'name' => 'Test User',
+        'password' => 'password',
+        'location_id' => 'NY345',
+        'phone' => '+4966412345678',
+    ])->assertSessionHasErrors('phone');
+
+    $this->post('/create-user', [
+        'email' => 'test@laracasts.com',
+        'name' => 'Test User',
+        'password' => 'password',
+        'location_id' => 'NY345',
+        'phone' => '+35 555-555',
+    ])->assertSessionHasErrors('phone');
+});

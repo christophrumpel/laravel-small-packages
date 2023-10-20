@@ -15,7 +15,7 @@ class CreateUserController extends Controller
             'email' => ['required', 'email', 'unique:users,email'],
             'password' => ['required', 'min:8'],
             'location_id' => ['required', 'exists:App\Models\Location,code'],
-            'phone' => ['nullable', 'numeric'],
+            'phone' => ['nullable', 'phone:AT'],
         ]);
 
         $data['location_id'] = Location::where('code', $data['location_id'])->first()->id;
