@@ -18,6 +18,7 @@
         "league/flysystem-ftp": "^3.0",
         "livewire/livewire": "^3.0",
         "propaganistas/laravel-phone": "^5.0",
+        "rennokki/laravel-eloquent-query-cache": "^3.4",
         "spatie/laravel-backup": "^8.4",
         "spatie/laravel-data": "^3.9",
         "spatie/laravel-login-link": "^1.1"
@@ -30,7 +31,8 @@
         "nunomaduro/collision": "^7.0",
         "pestphp/pest": "^2.0",
         "pestphp/pest-plugin-laravel": "^2.0",
-        "spatie/laravel-ignition": "^2.0"
+        "spatie/laravel-ignition": "^2.0",
+        "spatie/laravel-ray": "^1.33"
     },
     "autoload": {
         "psr-4": {
