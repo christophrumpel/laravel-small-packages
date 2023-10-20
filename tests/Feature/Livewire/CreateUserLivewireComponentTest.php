@@ -21,8 +21,8 @@ it('can create a new user', function () {
     ]);
 });
 
-it('makes sure properties and methods are wired', function() {
-	// Arrange  & Act
+it('makes sure properties and methods are wired', function () {
+    // Arrange  & Act
     Livewire::test(CreateUserLivewireComponent::class)
         ->assertPropertyWired('name')
         ->assertPropertyWired('email')

@@ -14,9 +14,9 @@ it('can create a user with location', function () {
     ])->assertOk();
 
     $this->assertDatabaseHas('users', [
-            'email' => 'test@laracasts.com',
-            'name' => 'Test User',
-            'location_id' => 1,
+        'email' => 'test@laracasts.com',
+        'name' => 'Test User',
+        'location_id' => 1,
     ]);
 
 });

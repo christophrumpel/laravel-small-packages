@@ -10,10 +10,12 @@ use Livewire\Component;
 class CreateUserLivewireComponent extends Component
 {
     public string $name = '';
-    public string $email = '';
-    public string $password = '';
-    public int $location_id = 1;
 
+    public string $email = '';
+
+    public string $password = '';
+
+    public int $location_id = 1;
 
     public function render(): View
     {

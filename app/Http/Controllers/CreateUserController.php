@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class CreateUserController extends Controller
 {
-    public function __invoke(Request $request ): void
+    public function __invoke(Request $request): void
     {
         $data = request()->validate([
             'name' => ['required'],
@@ -18,7 +18,6 @@ class CreateUserController extends Controller
         ]);
 
         $data['location_id'] = Location::where('code', $data['location_id'])->first()->id;
-
 
         User::create($data);
     }

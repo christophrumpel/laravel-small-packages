@@ -13,27 +13,27 @@ class Location extends Model
         [
             'id' => 1,
             'name' => 'New York',
-            'code' => 'NY345'
+            'code' => 'NY345',
         ],
         [
             'id' => 2,
             'name' => 'Los Angeles',
-            'code' => 'LA123'
+            'code' => 'LA123',
         ],
         [
             'id' => 3,
             'name' => 'San Francisco',
-            'code' => 'SF567'
+            'code' => 'SF567',
         ],
         [
             'id' => 4,
             'name' => 'Chicago',
-            'code' => 'CH789'
+            'code' => 'CH789',
         ],
         [
             'id' => 5,
             'name' => 'Seattle',
-            'code' => 'SE901'
-        ]
+            'code' => 'SE901',
+        ],
     ];
 }

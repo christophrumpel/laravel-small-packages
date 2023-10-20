@@ -12,7 +12,7 @@ class LocalTestUsersSeeder extends Seeder
         if (app()->environment('local')) {
             User::updateOrCreate([
                 'email' => 'christoph@laracasts.com',
-            ],[
+            ], [
                 'name' => 'Christoph Rumpel',
                 'email' => 'christoph@laracasts.com',
                 'password' => bcrypt('password'),
