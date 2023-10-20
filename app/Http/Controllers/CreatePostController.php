@@ -10,5 +10,9 @@ class CreatePostController extends Controller
     public function __invoke(PostData $data)
     {
         Post::create($data->toArray());
+
+        session()->flash('alert', 'Post saved successfully.');
+
+        return redirect()->back();
     }
 }

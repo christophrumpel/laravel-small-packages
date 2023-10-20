@@ -2,6 +2,7 @@
 
 use Abraham\TwitterOAuth\TwitterOAuth;
 use App\Http\Controllers\CreatePostController;
+use App\Http\Controllers\CreatePostFormController;
 use App\Http\Controllers\CreateUserController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +22,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/tweet', function () {
     $connection = new TwitterOAuth(
         config('services.twitter.consumer_key'),
@@ -35,6 +37,9 @@ Route::get('/tweet', function () {
 
 Route::post('/create-user', CreateUserController::class)
     ->name('create-user');
+
+Route::get('/posts/create', CreatePostFormController::class);
+
 
 Route::post('/posts', CreatePostController::class)
     ->name('create-post');
